@@ -1,5 +1,3 @@
-Perfect — here's the **final clean `README.md`** without the *Project Structure* and *Notes* sections:
-
 ---
 
 ## 🔗 Bitly Clone – URL Shortener (FastAPI + React + Redis)
@@ -7,6 +5,12 @@ Perfect — here's the **final clean `README.md`** without the *Project Structur
 A full-stack URL shortener inspired by Bitly. The backend is built with **FastAPI**, uses **Redis** for caching, and the frontend is a **React** application. Everything is containerized using **Docker Compose**.
 
 ![image](https://github.com/user-attachments/assets/821ce622-c63b-4b6f-81f5-185b829790c1)
+
+---
+
+## 💬 High Level Architecture Diagram
+
+![image](https://github.com/user-attachments/assets/600edfa2-29f8-445b-98b7-273dd629f7e2)
 
 
 ---
@@ -78,7 +82,8 @@ Create a `.env` file in the project root (used by the backend):
 
 ```env
 DATABASE_URL=postgresql+asyncpg://user:password@db:5432/dbname
-REDIS_URL=redis://redis:6379/0
+REDIS_HOST=redis
+REDIS_PORT=6379
 ```
 
 Make sure these are referenced in `server/db.py` and `redis_client.py`.
@@ -89,7 +94,7 @@ Make sure these are referenced in `server/db.py` and `redis_client.py`.
 
 Once the project is running:
 
-* Access the **React frontend** at: [http://localhost:8080](http://localhost:8080)
+* Access the **React frontend** at: [http://localhost:5173](http://localhost:5173)
 * It interacts with the backend at `/api`
 
 ---
