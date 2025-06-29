@@ -11,7 +11,7 @@ function App() {
   const handleSubmit = async () => {
     if(!url) return 
 
-    const response = await fetch(`${BACKEND_URL}/shorten`, {
+    const response = await fetch(`${BACKEND_URL}/api/shorten`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -34,14 +34,14 @@ def generate_random_url():
     return short_url
 
 
-@app.get("/") 
+@app.get("/api") 
 def hello_world():
     return {
         "message": "Hello",
         "status": 200
     }
 
-@app.post("/shorten")
+@app.post("/api/shorten")
 async def shorten(payload: ShortenBody, db: AsyncSession = Depends(get_db)):
     if not payload.longUrl: return "Long URL is required"
 
