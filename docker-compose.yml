@@ -7,6 +7,7 @@ services:
       - 80:80
     depends_on:
       - server
+    restart: always
 
   server:
     image: sunilswizy/bitly-server
@@ -17,6 +18,7 @@ services:
       - .env
     depends_on:
       - redis
+    restart: always
     
   redis:
     image: redis:latest
