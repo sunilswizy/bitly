@@ -1,0 +1,6 @@
+CREATE TABLE shorten (
+  short_url VARCHAR(10) PRIMARY KEY,
+  long_url VARCHAR(500),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  used_count INT DEFAULT 0
+);
